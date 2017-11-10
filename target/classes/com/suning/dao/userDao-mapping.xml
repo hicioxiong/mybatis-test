@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+<!DOCTYPE mapper   
+ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd"> 
+<mapper namespace="com.suning.dao.UserDao">
+ 
+ 	<insert id="insert" parameterType="com.suning.domain.User">
+ 		insert into user_test values (#{id}, #{name}, #{password}, #{age}, #{deleteFlag});
+ 	</insert>
+ 
+    <select id="findUserById" resultType="com.suning.domain.User" > 
+       select * from user_test where id = #{id}
+    </select>
+    
+    <select id="findAllUsers" resultType="com.suning.domain.User">
+    	select * from user_test
+    </select>
+ 
+</mapper>
