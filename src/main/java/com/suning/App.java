@@ -18,6 +18,7 @@ import com.suning.domain.User;
  */
 public class App {
     
+    // 入口
     public static void main(String[] args) {
 //        addUser();
 //        findUserById();
